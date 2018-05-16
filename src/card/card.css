@@ -1,8 +1,14 @@
 
 li {
+  display: inline-block;
   width: 100px;
   height: 100px;
   background-color: gray;
   margin: 10px;
-  
+  list-style-type: none;  
+  align-content: center;
+}
+
+span {
+  line-height: 100px;
 }

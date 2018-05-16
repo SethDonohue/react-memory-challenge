@@ -3,31 +3,37 @@ import './card.css';
 
 class Card extends Component {
   state = {
-    flipped: false,
-    cardColor: this.props.color,
+    // flipped: false,
+    cardColor: 'gray',
+    cardText: 'Back',
   }
 
   handleClick = event => {
-    const { id } = event.target;
-
-    if (!this.state.flipped) {
+    // const { id } = event.target;
+    // console.log(this);
+    if (this.state.cardColor === 'gray') {
       // set the div bg color attr to the color
-      this.style.backgroundColor = this.state.cardColor;
+      this.setState({
+        cardColor: this.props.cardColor,
+        cardText: 'Front',
+      });
     } else {
       // set the div bg color attr to the gray
+      this.setState({
+        cardColor: 'gray',
+        cardText: 'back',
+      });
     }
   }
 
   
   render() {
     return (
-      <li>
-        <div
-          onClick={this.handleClick}
-          cardColor={this.state.cardColor}
-        >
-          <span>Card</span>
-        </div>
+      <li
+        onClick={this.handleClick}
+        style={{ backgroundColor: this.state.cardColor }}
+      >
+        <span>{this.state.cardText}</span>
       </li>
     );
   }
