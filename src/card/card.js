@@ -29,7 +29,7 @@ class Card extends Component {
     return (
       /* eslint-disable */
       <div
-        class="card"
+        className="card"
       // key={this.props.key}
       onClick={this.handleClick}
         style={{ backgroundColor: this.state.cardColor }}
