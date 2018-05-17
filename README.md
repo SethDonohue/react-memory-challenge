@@ -10,14 +10,14 @@
  This project was created as a React Challenge for interviews.
 
 ## Challenge:
-- To create a React app with 16 cards (4x4 grid) that have a back side with no color (gray) and front side with color (8 different colors)
-- When 2 cards are flipped over with the same color they are marked as a match and remain flipped to colored side.
-- Stretch Goals:
-  - Remove the cards from the grid when they are matched.
-  - Randomize the color locations with on load
-  - Have a maximum number of chances
-    - make that an option
-  - Increase grid size and total cards
+- [ ] To create a React app with 16 cards (4x4 grid) that have a back side with no color (gray) and front side with color (8 different colors)
+- [ ] When 2 cards are flipped over with the same color they are marked as a match and remain flipped to colored side.
+- [ ] Stretch Goals:
+  - [ ] Remove the cards from the grid when they are matched.
+  - [ ] Randomize the color locations with on load
+  - [ ] Have a maximum number of chances
+    - [ ] make that an option
+  - [ ] Increase grid size and total cards
 
 
 ### Created using create-react-app
