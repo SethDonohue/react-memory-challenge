@@ -9,8 +9,6 @@ class Card extends Component {
   }
 
   handleClick = event => {
-    // const { id } = event.target;
-    // console.log(this);
     if (this.state.cardColor === 'gray') {
       // set the div bg color attr to the color
       this.setState({
@@ -30,13 +28,14 @@ class Card extends Component {
   render() {
     return (
       /* eslint-disable */
-      <li
+      <div
+        class="card"
       // key={this.props.key}
       onClick={this.handleClick}
         style={{ backgroundColor: this.state.cardColor }}
       >
         <span>{this.state.cardText}</span>
-      </li>
+      </div>
       /* eslint-enable */
     );
   }
