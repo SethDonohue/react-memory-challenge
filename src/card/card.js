@@ -21,7 +21,7 @@ class Card extends Component {
       // set the div bg color attr to the gray
       this.setState({
         cardColor: 'gray',
-        cardText: 'back',
+        cardText: 'Back',
       });
     }
   }
@@ -29,12 +29,15 @@ class Card extends Component {
   
   render() {
     return (
+      /* eslint-disable */
       <li
-        onClick={this.handleClick}
+      // key={this.props.key}
+      onClick={this.handleClick}
         style={{ backgroundColor: this.state.cardColor }}
       >
         <span>{this.state.cardText}</span>
       </li>
+      /* eslint-enable */
     );
   }
 }
