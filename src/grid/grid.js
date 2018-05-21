@@ -26,31 +26,32 @@ class Grid extends Component {
     return tempArr;
   }
 
-  createGrid = () => {
-    const colorArr = this.randomColorArr();
+  // createGrid = () => {
+  //   const colorArr = this.randomColorArr();
 
-    const pickColor = () => {
-      return colorArr.pop();
-    };
+  //   const pickColor = () => {
+  //     return colorArr.pop();
+  //   };
 
-    const grid = [];
+  //   const grid = [];
 
-    // Outerloop for tr
-    for (let i = 0; i < 4; i++) {
-      const rows = [];
-      // Inner for td
-      for (let j = 0; j < 4; j++) {
-        rows.push(<td key={(j * 10) + i}><Card cardColor={pickColor()} /></td>);
-      }
-      grid.push(<tr key={(i * 5)} >{rows}</tr>);
-    }
-    return grid;
-  }
+  //   // Outerloop for tr
+  //   for (let i = 0; i < 4; i++) {
+  //     const rows = [];
+  //     // Inner for td
+  //     for (let j = 0; j < 4; j++) {
+  //       rows.push(<td key={(j * 10) + i}><Card cardColor={pickColor()} /></td>);
+  //     }
+  //     grid.push(<tr key={(i * 5)} >{rows}</tr>);
+  //   }
+  //   return grid;
+  // }
+
   render() {
     return (
       <table id="grid">
         <tbody>
-          {this.createGrid()}
+          <tr><td><Card cardColor={this.} /></td><td>Card 1</td><td>Card 1</td><td>Card 1</td></tr>
         </tbody>
       </table>
     );
