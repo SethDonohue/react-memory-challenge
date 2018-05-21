@@ -82,7 +82,11 @@ class Grid extends Component {
     
     return (
       <div id="grid">
-        {this.renderCards(this.state.cards)}
+        <table>
+          <tbody>
+            {this.renderCards(this.state.cards)}
+          </tbody>
+        </table>
       </div>
     );
   }
