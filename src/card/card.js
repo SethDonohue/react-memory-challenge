@@ -2,14 +2,23 @@ import React, { Component } from 'react';
 import './card.css';
 
 class Card extends Component {
+  handleClick = (event) => {
+    if (!this.props.flipped) {
+      this.props.matchCheck(this.props.color, this.props.id);
+    }
+  }
+
   render() {
     return (
-      <button
+      <div
         className="card"
-        style={{ backgroundColor: this.props.cardColor }}
+        id={this.props.cardId}
+        type="button"
+        style={{ backgroundColor: this.props.bgColor }}
+        onClick={this.handleClick}
       >
-        Card
-      </button>
+        <span>Card</span>
+      </div>
     );
   }
 }

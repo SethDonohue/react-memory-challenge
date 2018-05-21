@@ -6,7 +6,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    cardAmount: 16,
+    // cardAmount: 16,
     colorSet: ['rgb(100, 0, 0)', 'rgb(0, 100, 0)', 'rgb(0, 0, 100)',
       'rgb(100, 100, 0)', 'rgb(0, 100, 100)', 'rgb(100, 0, 100)',
       'rgb(200, 0, 0)', 'rgb(0, 200, 0)', 'rgb(0, 0, 200)',
@@ -62,7 +62,6 @@ class App extends Component {
           <h1 className="App-title">Welcome to Memory</h1>
         </header>
         <Grid
-          cardAmount={this.state.cardAmount}
           colorArr={colorArr}
         />
       </div>
