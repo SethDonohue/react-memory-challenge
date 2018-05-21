@@ -1,14 +1,13 @@
 
 .card {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-color: white;
   margin: 10px;
-  list-style-type: none;  
-  align-content: center;
+  align-self: center;
+  justify-self: center;
 }
 
 span {
-  line-height: 100px;
+  line-height: 150px;
 }
