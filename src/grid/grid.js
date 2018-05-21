@@ -35,7 +35,7 @@ class Grid extends Component {
 
     // Set card to Flipped
     cards[cardId].flipped = true;
-
+    this.setState({ cards });
     if (this.state.lastCard) {
       if (cardColor === lastCard.cardColor) {
         cards[cardId].matched = true;
@@ -46,14 +46,14 @@ class Grid extends Component {
           lastCard: null,
         });
       } else {
-        alert('Cards Dont Match');
-        // console.log('Cards DONT match');
-        cards[cardId].flipped = false;
-        cards[lastCard.cardId].flipped = false;
-        this.setState({
-          cards,
-          lastCard: null,
-        });
+        setTimeout(() => {
+          cards[cardId].flipped = false;
+          cards[lastCard.cardId].flipped = false;
+          this.setState({
+            cards,
+            lastCard: null,
+          });
+        }, 2000);
       }
     } else {
       // console.log('Cards DONT match');

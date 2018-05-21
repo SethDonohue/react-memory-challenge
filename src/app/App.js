@@ -6,7 +6,6 @@ import './App.css';
 
 class App extends Component {
   state = {
-    // cardAmount: 16,
     colorSet: ['rgb(100, 0, 0)', 'rgb(0, 100, 0)', 'rgb(0, 0, 100)',
       'rgb(100, 100, 0)', 'rgb(0, 100, 100)', 'rgb(100, 0, 100)',
       'rgb(200, 0, 0)', 'rgb(0, 200, 0)', 'rgb(0, 0, 200)',
@@ -18,16 +17,6 @@ class App extends Component {
     // 'rgb(100, 100, 100)', 'rgb(0, 0, 0)', 'rgb(200, 200, 200)',
     // 'rgb(256, 256, 256)'
   }
-
-  // componentDidMount() {
-  //   console.log('Grid Mounted');
-  //   // Run createGrid() here so it only happens once, not everytme state is updated..
-  //   // const grid = this.createGrid();
-  //   this.setState({ //eslint-disable-line
-  //     colorArr: this.randomColorArr(),
-  //   });
-  // }
-
 
   randomInt = (max) => Math.floor(Math.random() * Math.floor(max));
 
