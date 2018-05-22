@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Card from './card';
+import Card from '../card/card';
 
 test('renders a card', () => {
   const component = renderer.create(
