@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a card 1`] = `
+<div
+  className="card"
+  id={undefined}
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": undefined,
+    }
+  }
+  type="button"
+>
+  <p
+    style={
+      Object {
+        "display": undefined,
+      }
+    }
+  />
+</div>
+`;
