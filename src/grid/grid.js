@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import './grid.css';
 import Card from '../card/card';
 
@@ -7,6 +7,7 @@ class Grid extends Component {
     cards: this.initializeCards(),
     lastCard: null,
     comparing: false,
+    tries: 0,
   }
 
   initializeCards() {
@@ -75,7 +76,7 @@ class Grid extends Component {
     cards[cardId].flipped = true;
     this.setState({ cards });
     if (this.state.lastCard) {
-      this.setState({ comparing: true });
+      this.setState({ comparing: true, tries: this.state.tries + 1 });
       if (cardColor === lastCard.cardColor) {
         cards[cardId].matched = true;
         cards[lastCard.cardId].matched = true;
@@ -103,6 +104,16 @@ class Grid extends Component {
     }
   }
 
+  resetGame() {
+    this.setState({
+      cards: this.initializeCards(),
+      lastCard: null,
+      comparing: false,
+      tries: 0,
+    });
+  }
+
+
   renderCards(cards) {
     return cards.map((card, index) => (
       <Card
@@ -120,12 +131,14 @@ class Grid extends Component {
   }
 
   render() {
-    // Create a map of each card, it's color, text, and if it is disabled or not
-    
     return (
-      <div id="grid">
-        {this.renderCards(this.state.cards)}
-      </div>
+      <Fragment>
+        <h1>Attempts: {this.state.tries} </h1>
+        <div id="grid">
+          {this.renderCards(this.state.cards)}
+        </div>
+        <button id="resetButton" onClick={() => this.resetGame()}>Reset Game</button>
+      </Fragment>
     );
   }
 }
