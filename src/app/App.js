@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import logo from '../assets/logo.svg';
 import Grid from '../grid/grid';
 import './App.css';
 
@@ -48,6 +47,14 @@ class App extends Component {
   render() {
     const dataArray = this.randomdataArray();
 
+    let bestScore = null;
+    if (localStorage.bestScore) {
+      bestScore = localStorage.bestScore;
+    } else {
+      localStorage.bestScore = '0';
+      bestScore = '0';
+    }
+
     return (
       <div className="App">
         <header className="App-header">
@@ -55,6 +62,7 @@ class App extends Component {
         </header>
         <Grid
           dataArray={dataArray}
+          bestScore={bestScore}
         />
       </div>
     );

@@ -7,7 +7,8 @@ class Grid extends Component {
     cards: this.initializeCards(),
     lastCard: null,
     comparing: false,
-    tries: 0,
+    attempts: 0,
+    matches: 0,
   }
 
   initializeCards() {
@@ -76,7 +77,7 @@ class Grid extends Component {
     cards[cardId].flipped = true;
     this.setState({ cards });
     if (this.state.lastCard) {
-      this.setState({ comparing: true, tries: this.state.tries + 1 });
+      this.setState({ comparing: true, attempts: this.state.attempts + 1 });
       if (cardColor === lastCard.cardColor) {
         cards[cardId].matched = true;
         cards[lastCard.cardId].matched = true;
@@ -84,6 +85,7 @@ class Grid extends Component {
           cards,
           lastCard: null,
           comparing: false,
+          matches: this.state.matches + 1,
         });
       } else {
         setTimeout(() => {
@@ -109,10 +111,10 @@ class Grid extends Component {
       cards: this.initializeCards(),
       lastCard: null,
       comparing: false,
-      tries: 0,
+      attempts: 0,
+      matches: 0,
     });
   }
-
 
   renderCards(cards) {
     return cards.map((card, index) => (
@@ -131,9 +133,23 @@ class Grid extends Component {
   }
 
   render() {
+    let bestScoreJSX = this.props.bestScore;
+    
+    let winJSX = null;
+    if (this.state.matches === 8) {
+      winJSX = 'You Win!';
+      if (this.props.bestScore > this.state.attempts) {
+        localStorage.bestScore = this.state.attempts;
+        bestScoreJSX = this.state.attempts.toString();
+      }
+    } else {
+      winJSX = null;
+    }
+
     return (
       <Fragment>
-        <h1>Attempts: {this.state.tries} </h1>
+        <h1>{winJSX}</h1>
+        <h1>Attempts: {this.state.attempts} Best: {bestScoreJSX}</h1>
         <div id="grid">
           {this.renderCards(this.state.cards)}
         </div>
