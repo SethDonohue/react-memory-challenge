@@ -13,36 +13,40 @@ class App extends Component {
       'rgb(300, 0, 0)', 'rgb(0, 300, 0)', 'rgb(0, 0, 300)',
       'rgb(300, 300, 0)',
     ],
-    // 'rgb(0, 300, 300)', 'rgb(300, 0, 300)',
-    // 'rgb(100, 100, 100)', 'rgb(0, 0, 0)', 'rgb(200, 200, 200)',
-    // 'rgb(256, 256, 256)'
+    valueSet: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
   }
 
   randomInt = (max) => Math.floor(Math.random() * Math.floor(max));
 
-  randomColorArr = () => {
+  randomdataArray = () => {
     // create 8 random colors in a map with keys
-    const map = {};
-    while (Object.keys(map).length < 8) {
+    const colorMap = {};
+    const valueMap = {};
+    while (Object.keys(colorMap).length < 8) {
       const randomIndex = this.randomInt(this.state.colorSet.length);
-      map[(this.state.colorSet[randomIndex])] = 2;
+      colorMap[(this.state.colorSet[randomIndex])] = true;
+      valueMap[(this.state.valueSet[randomIndex])] = true;
     }
-    // add arr oh keys onto self to double array length
-    const mapKeys = Object.keys(map);
-    const allColorsArr = mapKeys.concat(mapKeys);
+    // add arr of keys onto self to double array length
+    const colorMapKeys = Object.keys(colorMap);
+    const allColorsArr = colorMapKeys.concat(colorMapKeys);
+    const valueMapKeys = Object.keys(valueMap);
+    const allValuesArr = valueMapKeys.concat(valueMapKeys);
 
     // loop through arr for length and randomly insert elements from that arr into a new tempArr
     const tempArr = [];
     while (allColorsArr.length > 0) {
       const randomIndex = this.randomInt(allColorsArr.length);
-      tempArr.push(allColorsArr[randomIndex]);
+      tempArr.push({ color: allColorsArr[randomIndex], value: allValuesArr[randomIndex] });
       allColorsArr.splice(randomIndex, 1);
+      allValuesArr.splice(randomIndex, 1);
     }
+    console.log(tempArr);
     return tempArr;
   }
 
   render() {
-    const colorArr = this.randomColorArr();
+    const dataArray = this.randomdataArray();
 
     return (
       <div className="App">
@@ -51,7 +55,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to Memory</h1>
         </header>
         <Grid
-          colorArr={colorArr}
+          dataArray={dataArray}
         />
       </div>
     );

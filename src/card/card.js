@@ -16,7 +16,13 @@ class Card extends Component {
         type="button"
         style={{ backgroundColor: this.props.bgColor }}
         onClick={this.handleClick}
-      />
+      >
+        <p
+          style={{ display: this.props.display }}
+        >
+          {this.props.value}
+        </p>
+      </div>
     );
   }
 }

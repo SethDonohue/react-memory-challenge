@@ -10,23 +10,57 @@ class Grid extends Component {
   }
 
   initializeCards() {
+    const { dataArray } = this.props;
+
     return [
-      { color: this.props.colorArr[0], matched: false, flipped: false },
-      { color: this.props.colorArr[1], matched: false, flipped: false },
-      { color: this.props.colorArr[2], matched: false, flipped: false },
-      { color: this.props.colorArr[3], matched: false, flipped: false },
-      { color: this.props.colorArr[4], matched: false, flipped: false },
-      { color: this.props.colorArr[5], matched: false, flipped: false },
-      { color: this.props.colorArr[6], matched: false, flipped: false },
-      { color: this.props.colorArr[7], matched: false, flipped: false },
-      { color: this.props.colorArr[8], matched: false, flipped: false },
-      { color: this.props.colorArr[9], matched: false, flipped: false },
-      { color: this.props.colorArr[10], matched: false, flipped: false },
-      { color: this.props.colorArr[11], matched: false, flipped: false },
-      { color: this.props.colorArr[12], matched: false, flipped: false },
-      { color: this.props.colorArr[13], matched: false, flipped: false },
-      { color: this.props.colorArr[14], matched: false, flipped: false },
-      { color: this.props.colorArr[15], matched: false, flipped: false },
+      {
+        color: dataArray[0].color, value: dataArray[0].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[1].color, value: dataArray[1].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[2].color, value: dataArray[2].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[3].color, value: dataArray[3].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[4].color, value: dataArray[4].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[5].color, value: dataArray[5].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[6].color, value: dataArray[6].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[7].color, value: dataArray[7].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[8].color, value: dataArray[8].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[9].color, value: dataArray[9].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[10].color, value: dataArray[10].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[11].color, value: dataArray[11].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[12].color, value: dataArray[12].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[13].color, value: dataArray[13].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[14].color, value: dataArray[14].value, matched: false, flipped: false, 
+      },
+      {
+        color: dataArray[15].color, value: dataArray[15].value, matched: false, flipped: false, 
+      },
     ];
   }
 
@@ -75,7 +109,9 @@ class Grid extends Component {
         key={index}
         id={index}
         bgColor={card.flipped ? card.color : 'gray'}
+        value={card.flipped ? card.value : ''}
         color={card.color}
+        display={card.flipped ? 'block' : 'none'}
         matched={card.matched}
         flipped={card.flipped}
         matchCheck={this.matchCheck}
