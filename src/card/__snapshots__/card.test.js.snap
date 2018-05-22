@@ -7,17 +7,20 @@ exports[`renders a card 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "backgroundColor": undefined,
+      "backgroundColor": "gray",
     }
   }
   type="button"
 >
   <p
+    className="card-text"
     style={
       Object {
-        "display": undefined,
+        "display": "block",
       }
     }
-  />
+  >
+    10
+  </p>
 </div>
 `;

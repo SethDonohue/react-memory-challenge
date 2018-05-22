@@ -18,6 +18,7 @@ class Card extends Component {
         onClick={this.handleClick}
       >
         <p
+          className="card-text"
           style={{ display: this.props.display }}
         >
           {this.props.value}

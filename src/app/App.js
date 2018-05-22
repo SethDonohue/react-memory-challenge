@@ -17,7 +17,7 @@ class App extends Component {
 
   randomInt = (max) => Math.floor(Math.random() * Math.floor(max));
 
-  randomdataArray = () => {
+  randomDataArray = () => {
     // create 8 random colors in a map with keys
     const colorMap = {};
     const valueMap = {};
@@ -40,19 +40,21 @@ class App extends Component {
       allColorsArr.splice(randomIndex, 1);
       allValuesArr.splice(randomIndex, 1);
     }
-    console.log(tempArr);
     return tempArr;
   }
 
   render() {
-    const dataArray = this.randomdataArray();
+    const dataArray = this.randomDataArray();
 
     let bestScore = null;
-    if (localStorage.bestScore) {
-      bestScore = localStorage.bestScore;
-    } else {
-      localStorage.bestScore = '0';
-      bestScore = '0';
+
+    if (localStorage) {
+      if (localStorage.bestScore) {
+        bestScore = localStorage.bestScore;
+      } else {
+        localStorage.bestScore = '0';
+        bestScore = '0';
+      }
     }
 
     return (
