@@ -1,0 +1,386 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the App Random Methods Renders the App and compares to snapshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1
+      className="App-title"
+    >
+      Welcome to Memory
+    </h1>
+  </header>
+  <h1 />
+  <h1>
+    Attempts: 
+    0
+     Best: 
+    0
+  </h1>
+  <div
+    id="grid"
+  >
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+    <div
+      className="card"
+      id={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+        }
+      }
+      type="button"
+    >
+      <p
+        className="card-text"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        
+      </p>
+    </div>
+  </div>
+  <button
+    id="resetButton"
+    onClick={[Function]}
+  >
+    Reset Game
+  </button>
+</div>
+`;

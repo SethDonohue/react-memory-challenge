@@ -12,6 +12,12 @@ import '../setupTests';
 const wrapper = shallow(<App />);
 
 describe('Testing the App Random Methods', () => {
+  test('Renders the App and compares to snapshot', () => {
+    const component = renderer.create(<App />);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   test('METHOD randomInt creates a random positive int', () => {
     const randomNumber = wrapper.instance().randomInt(16);
     
