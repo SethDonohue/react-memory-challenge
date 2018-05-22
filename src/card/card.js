@@ -17,7 +17,6 @@ class Card extends Component {
         style={{ backgroundColor: this.props.bgColor }}
         onClick={this.handleClick}
       >
-        <span>Card</span>
       </div>
     );
   }

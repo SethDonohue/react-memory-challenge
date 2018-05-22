@@ -6,6 +6,7 @@ class Grid extends Component {
   state = {
     cards: this.initializeCards(),
     lastCard: null,
+    comparing: false,
   }
 
   initializeCards() {
@@ -30,20 +31,24 @@ class Grid extends Component {
   }
 
   matchCheck = (cardColor, cardId) => {
+    if (this.state.comparing) {
+      return;
+    }
+
     const { cards, lastCard } = this.state;
-    console.log('Math Check: ', 'last:', lastCard, 'curr:', cardId, cardColor);
 
     // Set card to Flipped
     cards[cardId].flipped = true;
     this.setState({ cards });
     if (this.state.lastCard) {
+      this.setState({ comparing: true });
       if (cardColor === lastCard.cardColor) {
         cards[cardId].matched = true;
         cards[lastCard.cardId].matched = true;
-        console.log('Cards Match');
         this.setState({
           cards,
           lastCard: null,
+          comparing: false,
         });
       } else {
         setTimeout(() => {
@@ -52,13 +57,14 @@ class Grid extends Component {
           this.setState({
             cards,
             lastCard: null,
+            comparing: false,
           });
-        }, 2000);
+        }, 1500);
       }
     } else {
-      // console.log('Cards DONT match');
       this.setState({
         lastCard: { cardId, cardColor },
+        comparing: false,
       });
     }
   }

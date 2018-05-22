@@ -1,13 +1,9 @@
 
 .card {
-  width: 150px;
-  height: 150px;
+  width: 20vw;
+  max-width: 150px;
+  max-height: 150px;
+  height: 20vw;
   background-color: white;
-  margin: 10px;
-  align-self: center;
-  justify-self: center;
-}
-
-span {
-  line-height: 150px;
+  margin: 5%;
 }
