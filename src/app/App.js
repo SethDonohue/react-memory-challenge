@@ -50,10 +50,10 @@ class App extends Component {
 
     if (localStorage) {
       if (localStorage.bestScore) {
-        bestScore = localStorage.bestScore;
+        bestScore = localStorage.getItem('bestScore');
       } else {
-        localStorage.bestScore = '0';
-        bestScore = '0';
+        localStorage.setItem('bestScore', 'No score yet!');
+        bestScore = 'No score yet!';
       }
     }
 

@@ -9,6 +9,7 @@ class Grid extends Component {
     comparing: false,
     attempts: 0,
     matches: 0,
+    bestScore: this.props.bestScore,
   }
 
   initializeCards() {
@@ -113,6 +114,7 @@ class Grid extends Component {
       comparing: false,
       attempts: 0,
       matches: 0,
+      bestScore: localStorage.getItem('bestScore'),
     });
   }
 
@@ -133,14 +135,14 @@ class Grid extends Component {
   }
 
   render() {
-    let bestScoreJSX = this.props.bestScore;
+    let { bestScore } = this.state;
     
     let winJSX = null;
     if (this.state.matches === 8) {
       winJSX = 'You Win!';
-      if (this.props.bestScore > this.state.attempts) {
-        localStorage.bestScore = this.state.attempts;
-        bestScoreJSX = this.state.attempts.toString();
+      if (bestScore === 'No score yet!' || bestScore > this.state.attempts) {
+        bestScore = this.state.attempts;
+        localStorage.setItem('bestScore', bestScore);
       }
     } else {
       winJSX = null;
@@ -149,7 +151,7 @@ class Grid extends Component {
     return (
       <Fragment>
         <h1>{winJSX}</h1>
-        <h1>Attempts: {this.state.attempts} Best: {bestScoreJSX}</h1>
+        <h1>Attempts: {this.state.attempts} Best: {bestScore.toString()}</h1>
         <div id="grid">
           {this.renderCards(this.state.cards)}
         </div>
