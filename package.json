@@ -2,7 +2,7 @@
   "name": "react-memory-challenge",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://myname.github.io/myapp",
+  "homepage": "http://sethdonohue.github.io/react-memory-challenge",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
