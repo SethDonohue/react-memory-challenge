@@ -1,5 +1,7 @@
 # React Memory Challenge
 
+### Deployed: https://sethdonohue.github.io/react-memory-challenge/
+
 ### Build Status
 [![Build Status](https://travis-ci.org/firepolls/back.svg?branch=master)](https://travis-ci.org/firepolls/back/)
 [![npm](https://img.shields.io/npm/l/express.svg)](https://github.com/firepolls/back/blob/master/LICENSE)
